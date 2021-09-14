@@ -143,16 +143,16 @@ erpnext.buying.PurchaseOrderController = erpnext.buying.BuyingController.extend(
 			}
 
 			if(!in_list(["Closed", "Delivered"], doc.status)) {
-				if(this.frm.doc.status !== 'Closed' && flt(this.frm.doc.per_received) < 100 && flt(this.frm.doc.per_billed) < 100) {
-					this.frm.add_custom_button(__('Update Items'), () => {
-						erpnext.utils.update_child_items({
-							frm: this.frm,
-							child_docname: "items",
-							child_doctype: "Purchase Order Detail",
-							cannot_add_row: false,
-						})
-					});
-				}
+				// if(this.frm.doc.status !== 'Closed' && flt(this.frm.doc.per_received) < 100 && flt(this.frm.doc.per_billed) < 100) {
+				// 	this.frm.add_custom_button(__('Update Items'), () => {
+				// 		erpnext.utils.update_child_items({
+				// 			frm: this.frm,
+				// 			child_docname: "items",
+				// 			child_doctype: "Purchase Order Detail",
+				// 			cannot_add_row: false,
+				// 		})
+				// 	});
+				// }
 				if (this.frm.has_perm("submit")) {
 					if(flt(doc.per_billed, 6) < 100 || flt(doc.per_received, 6) < 100) {
 						if (doc.status != "On Hold") {
