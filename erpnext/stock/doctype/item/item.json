@@ -182,12 +182,13 @@
   {
    "bold": 1,
    "fieldname": "item_name",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "in_global_search": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
    "label": "Item Name",
    "oldfieldname": "item_name",
-   "oldfieldtype": "Data",
-   "search_index": 1
+   "oldfieldtype": "Data"
   },
   {
    "fieldname": "item_group",
@@ -1067,7 +1068,7 @@
  "index_web_pages_for_search": 1,
  "links": [],
  "max_attachments": 1,
- "modified": "2021-07-13 01:29:06.071827",
+ "modified": "2021-09-14 15:06:41.766337",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Item",
