@@ -567,6 +567,9 @@ class Asset(AccountsController):
 		if args.get("depreciation_method") == 'Double Declining Balance':
 			return 200.0 / args.get("total_number_of_depreciations")
 
+		if args.get("depreciation_method") == 'Single Declining Balance':
+			return 100.0 / args.get("total_number_of_depreciations")
+
 		if args.get("depreciation_method") == "Written Down Value":
 			if args.get("rate_of_depreciation") and on_validate:
 				return args.get("rate_of_depreciation")
