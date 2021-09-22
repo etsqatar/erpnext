@@ -250,8 +250,8 @@
    "type": "Link"
   }
  ],
- "modified": "2021-09-15 12:12:34.022398",
- "modified_by": "lovin@oryxerp.qa",
+ "modified": "2021-04-19 15:48:44.089927",
+ "modified_by": "Administrator",
  "module": "Setup",
  "name": "Home",
  "owner": "Administrator",
@@ -264,32 +264,24 @@
    "type": "DocType"
   },
   {
+   "label": "Customer",
+   "link_to": "Customer",
+   "type": "DocType"
+  },
+  {
    "label": "Supplier",
    "link_to": "Supplier",
+   "type": "DocType"
+  },
+  {
+   "label": "Sales Invoice",
+   "link_to": "Sales Invoice",
    "type": "DocType"
   },
   {
    "label": "Leaderboard",
    "link_to": "leaderboard",
    "type": "Page"
-  },
-  {
-   "color": "#B4CD29",
-   "doc_view": "List",
-   "format": "{} Open",
-   "label": "Project",
-   "link_to": "Project",
-   "stats_filter": "{\n    \"status\" : \"Open\"\n}",
-   "type": "DocType"
-  },
-  {
-   "color": "#761ACB",
-   "doc_view": "List",
-   "format": "{} Open",
-   "label": "Pending PO Approvals",
-   "link_to": "Purchase Order",
-   "stats_filter": "{\n    \"docstatus\" : 0,\n    \"workflow_state\" : [\"!=\",\"Draft\"]\n}",
-   "type": "DocType"
   }
  ]
 }
