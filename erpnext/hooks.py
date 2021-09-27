@@ -311,6 +311,10 @@ doc_events = {
 		"after_insert": "erpnext.telephony.doctype.call_log.call_log.link_existing_conversations",
 		"validate": ["erpnext.crm.utils.update_lead_phone_numbers", "erpnext.healthcare.utils.update_patient_email_and_phone_numbers"]
 	},
+	"Salary Information File": {
+		"validate": "erpnext.regional.qatar.utils.validate_payer_details",
+		"on_update": ["erpnext.regional.qatar.utils.validate_bank_details_and_generate_csv", "erpnext.regional.united_arab_emirates.utils.validate_bank_details_and_generate_csv"]
+	},
 	"Email Unsubscribe": {
 		"after_insert": "erpnext.crm.doctype.email_campaign.email_campaign.unsubscribe_recipient"
 	},

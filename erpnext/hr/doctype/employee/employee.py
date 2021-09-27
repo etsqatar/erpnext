@@ -1,5 +1,6 @@
 # Copyright (c) 2015, Frappe Technologies Pvt. Ltd. and Contributors
 # License: GNU General Public License v3. See license.txt
+from utils import validate_iban
 import frappe
 from frappe import _, scrub, throw
 from frappe.model.naming import set_name_by_naming_series
@@ -52,6 +53,7 @@ class Employee(NestedSet):
 		self.validate_preferred_email()
 		if self.job_applicant:
 			self.validate_onboarding_process()
+		validate_iban(self.iban)
 
 		if self.user_id:
 			self.validate_user_details()
