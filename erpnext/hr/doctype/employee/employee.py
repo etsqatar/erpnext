@@ -1,6 +1,7 @@
 # Copyright (c) 2015, Frappe Technologies Pvt. Ltd. and Contributors
 # License: GNU General Public License v3. See license.txt
-from utils import validate_iban
+
+from erpnext.regional.qatar.utils import validate_iban
 import frappe
 from frappe import _, scrub, throw
 from frappe.model.naming import set_name_by_naming_series
